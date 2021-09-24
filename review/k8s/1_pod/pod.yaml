@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "ckadserver"
+  labels:
+    app: "ckadserver"
+spec:
+  containers:
+    - name: ckadserver
+      image: "rodrigoguedes/ckad:latest"

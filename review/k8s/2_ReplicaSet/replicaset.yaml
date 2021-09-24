@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: ckadserver
+  labels:
+    app: ckadserver
+spec:
+  selector:
+    matchLabels:
+      app: ckadserver
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: ckadserver
+    spec:
+      containers:
+        - name: ckadserver
+          image: "rodrigoguedes/ckad:latest"
